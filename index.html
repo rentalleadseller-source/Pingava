@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MyMonthlyScore — Fast & Secure</title>
+<style>
+body{font-family:Verdana, sans-serif;background:#f1f5f9;margin:0;padding:0;color:#111827}
+.container{max-width:700px;margin:40px auto;padding:22px;background:#fff;border-radius:14px;box-shadow:0 8px 28px rgba(0,0,0,0.08)}
+h1{text-align:center;color:#059669;margin-bottom:6px}
+.lead{text-align:center;color:#374151;margin-bottom:14px}
+.meter{text-align:center;margin:16px 0}
+.cta{display:block;text-align:center;background:#059669;color:#fff;text-decoration:none;padding:14px;border-radius:8px;font-weight:bold;margin:18px auto;max-width:440px}
+.cta:hover{background:#047857}
+.trust{text-align:center;font-size:14px;color:#374151;margin-top:8px}
+ul{color:#374151;line-height:1.6}
+.notice{
+  text-align:center;
+  font-weight:bold;
+  margin:16px 0;
+  color:#111827;
+}
+.notice span{color:red;}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📈 MyMonthlyScore Insights</h1>
+<p id="geo" class="lead">Loading location...</p>
+<div class="meter">🟢 Stay updated on your monthly score changes</div>
+<ul>
+<li>📊 Understand what moves your score</li>
+<li>🔒 Privacy-first, secure redirect</li>
+<li>⚡ Quick check, no delays</li>
+</ul>
+
+<p class="notice">Don't press <span>BACK</span> until you see your report</p>
+
+<a href="https://afflat3b2.com/trk/lnk/5C1C8447-9AF1-41E2-8F88-1973B6C8A952/?o=30322&c=918277&a=764937&k=846368C9DA2166DC3D984001A8380A3C&l=34593&s1=SH-N-SAS_Office" class="cta" target="_blank" rel="noopener">➡️ Check your Public Background Report</a>
+
+<div class="trust">🔒 SSL Secured • 🌐 Independent • 🚀 Transparency First</div>
+</div>
+
+<script>
+(function () {
+  var el=document.getElementById('geo');
+  function setLine(city,region,country){
+    var parts=[city,region].filter(Boolean);
+    if(parts.length===0) parts=[country].filter(Boolean);
+    if(parts.length){
+      el.innerHTML="You're eligible from <strong>"+parts.join(', ')+"</strong>";
+    } else {
+      el.style.display="none";
+    }
+  }
+  fetch('https://ipapi.co/json/').then(r=>r.json()).then(d=>{
+    if(!d.error){setLine(d.city,d.region,d.country_name);}else{throw new Error();}
+  }).catch(()=>{
+    fetch('https://ipwho.is/').then(r=>r.json()).then(d=>{
+      if(d && d.success!==false){setLine(d.city,d.region,d.country);}
+      else{el.style.display="none";}
+    }).catch(()=>{el.style.display="none";});
+  });
+})();
+</script>
+</body>
+</html>
