@@ -1,11 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MyMonthlyScore — Fast & Secure</title>
-<style>
-body{font-family:Verdana, sans-serif;background:#f1f5f9;margin:0;padding:0;color:#111827}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      MyMonthlyScore — Fast &amp; Secure
+    </title>
+    <style>
+      body{font-family:Verdana, sans-serif;background:#f1f5f9;margin:0;padding:0;color:#111827}
 .container{max-width:700px;margin:40px auto;padding:22px;background:#fff;border-radius:14px;box-shadow:0 8px 28px rgba(0,0,0,0.08)}
 h1{text-align:center;color:#059669;margin-bottom:6px}
 .lead{text-align:center;color:#374151;margin-bottom:14px}
@@ -13,55 +15,54 @@ h1{text-align:center;color:#059669;margin-bottom:6px}
 .cta{display:block;text-align:center;background:#059669;color:#fff;text-decoration:none;padding:14px;border-radius:8px;font-weight:bold;margin:18px auto;max-width:440px}
 .cta:hover{background:#047857}
 .trust{text-align:center;font-size:14px;color:#374151;margin-top:8px}
-ul{color:#374151;line-height:1.6}
-.notice{
-  text-align:center;
-  font-weight:bold;
-  margin:16px 0;
-  color:#111827;
-}
-.notice span{color:red;}
-</style>
-</head>
-<body>
-<div class="container">
-<h1>📈 MyMonthlyScore Insights</h1>
-<p id="geo" class="lead">Loading location...</p>
-<div class="meter">🟢 Stay updated on your monthly score changes</div>
-<ul>
-<li>📊 Understand what moves your score</li>
-<li>🔒 Privacy-first, secure redirect</li>
-<li>⚡ Quick check, no delays</li>
-</ul>
-
-<p class="notice">Don't press <span>BACK</span> until you see your report</p>
-
-<a href="https://afflat3a1.com/trk/lnk/FB53B33F-4769-4F2D-A03B-876597780B0D/?o=30322&c=918277&a=705894&k=6D1082126EC3707BAC7671641D78542A&l=34593&s1=Sky-N-SAS-Office" class="cta" target="_blank" rel="noopener">➡️ Check your Public Background Report</a>
-
-<div class="trust">🔒 SSL Secured • 🌐 Independent • 🚀 Transparency First</div>
-</div>
-
-<script>
-(function () {
-  var el=document.getElementById('geo');
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        📈 MyMonthlyScore Insights
+      </h1>
+      <p id="geo" class="lead">
+        Loading location...
+      </p>
+      <div class="meter">
+        🟢 Stay updated on your monthly score changes
+      </div>
+      <ul>
+        <li>
+          📊 Understand what moves your score
+        </li>
+        <li>
+          🔒 Privacy-first, secure redirect
+        </li>
+        <li>
+          ⚡ Quick check, no delays
+        </li>
+        <li>
+          🕵 Don&#39;t press BACK until you see your report
+        </li>
+      </ul>
+      <a href="https://afflat3a1.com/trk/lnk/FB53B33F-4769-4F2D-A03B-876597780B0D/?o=30322&c=918277&a=705894&k=6D1082126EC3707BAC7671641D78542A&l=34593&s1=Sky-N-SAS-Office" class="cta" target="_blank" rel="noopener">      ➡️ Check your Public Background Report
+</a>
+      <div class="trust">
+        🔒 SSL Secured • 🌐 Independent • 🚀 Transparency First
+      </div>
+    </div>
+    <script>
+      (function () {
+  var el=document.getElementById(&#39;geo&#39;);
   function setLine(city,region,country){
-    var parts=[city,region].filter(Boolean);
-    if(parts.length===0) parts=[country].filter(Boolean);
-    if(parts.length){
-      el.innerHTML="You're eligible from <strong>"+parts.join(', ')+"</strong>";
-    } else {
-      el.style.display="none";
-    }
+    var parts=[city,region].filter(Boolean);if(parts.length===0) parts=[country].filter(Boolean);
+    if(parts.length){el.innerHTML=&#34;You&#39;re eligible from &lt;strong&gt;&#34;+parts.join(&#39;, &#39;)+&#34;&lt;/strong&gt;&#34;;} else {el.style.display=&#34;none&#34;;}
   }
-  fetch('https://ipapi.co/json/').then(r=>r.json()).then(d=>{
+  fetch(&#39;https://ipapi.co/json/&#39;).then(r=&gt;r.json()).then(d=&gt;{
     if(!d.error){setLine(d.city,d.region,d.country_name);}else{throw new Error();}
-  }).catch(()=>{
-    fetch('https://ipwho.is/').then(r=>r.json()).then(d=>{
-      if(d && d.success!==false){setLine(d.city,d.region,d.country);}
-      else{el.style.display="none";}
-    }).catch(()=>{el.style.display="none";});
+  }).catch(()=&gt;{
+    fetch(&#39;https://ipwho.is/&#39;).then(r=&gt;r.json()).then(d=&gt;{
+      if(d &amp;&amp; d.success!==false){setLine(d.city,d.region,d.country);}else{el.style.display=&#34;none&#34;;}
+    }).catch(()=&gt;{el.style.display=&#34;none&#34;;});
   });
 })();
-</script>
-</body>
+    </script>
+  </body>
 </html>
