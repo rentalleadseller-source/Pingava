@@ -1,123 +1,92 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Credit Check Only $1</title>
-<style>
-    html, body {
-        margin:0;
-        padding:0;
-        height:100%;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background:#f0f4f8;
-        color:#333;
-        overflow:hidden; /* prevent scrolling */
-        display:flex;
-        justify-content:center;
-        align-items:center;
-    }
-
-    .card {
-        background:#fff;
-        border-radius:20px;
-        box-shadow:0 10px 30px rgba(0,0,0,0.15);
-        width:90%;
-        max-width:500px;
-        padding:30px;
-        text-align:center;
-        display:flex;
-        flex-direction:column;
-        justify-content:space-between;
-        height:90%;
-    }
-
-    h1 {
-        font-size:26px;
-        margin-bottom:5px;
-        color:#1e2a38;
-    }
-
-    h2 {
-        font-size:16px;
-        font-weight:normal;
-        margin:5px 0 20px 0;
-        color:#555;
-    }
-
-    ul {
-        text-align:left;
-        padding-left:20px;
-        margin-top:15px;
-        color:#444;
-    }
-
-    .cta-btn {
-        margin-top:20px;
-        background:#4caf50;
-        color:#fff;
-        font-weight:bold;
-        font-size:17px;
-        padding:15px;
-        border-radius:12px;
-        text-decoration:none;
-        transition:0.3s;
-    }
-
-    .cta-btn:hover {
-        background:#43a047;
-    }
-
-    .illustration {
-        margin:20px 0;
-        width:120px;
-        height:120px;
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    footer {
-        font-size:12px;
-        color:#999;
-        margin-top:15px;
-    }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Credit & Background Check</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 </head>
-<body>
-
-<div class="card">
-    <div>
-        <h1>Instant Credit Check</h1>
-        <h2 id="location-text">Only <strong>$1</strong> • Safe & Secure</h2>
-
-<img src="d65be830-2c05-4eb3-89b9-bd7d6da2322b.png" alt="Person with Credit Score" class="illustration">
-
-
-        <ul>
-            <li>Full credit report instantly</li>
-            <li>Check loans, rentals & approvals</li>
-            <li>Secure verification process</li>
-            <li>No impact on your credit score</li>
-        </ul>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-700">Public-Record USA</h1>
+      <nav class="space-x-6 text-gray-600 font-medium">
+        <a href="#process" class="hover:text-blue-700">How It Works</a>
+      </nav>
     </div>
+  </header>
 
-    <a href="https://afflat3d2.com/trk/lnk/E2794CF5-E109-407A-8C74-28A94E4DE4AC/?o=29784&c=918277&a=697601&k=52C88BD0310330505B7ECAABC73E207F&l=33487&s1=NA-SAS-Peter" class="cta-btn" target="_blank">Start Credit Check — $1</a>
-</div>
+  <!-- Hero Section -->
+  <section class="bg-blue-700 text-white py-20">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-4">Credit & Background Screening</h2>
+      <p class="text-lg mb-6">Fast, secure, and authorized tenant verification for rental applications across the United States.</p>
+      <a href="https://creditsolutions.pro/go53" class="bg-white text-blue-700 font-semibold px-8 py-3 rounded-lg shadow hover:bg-gray-200 transition">Start Screening</a>
+    </div>
+  </section>
 
-<footer>© 2025 Credit Verification Service. All Rights Reserved.</footer>
+  <!-- Features Section -->
+  <section id="features" class="py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Why Choose Our Screening?</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-<script>
-fetch('https://ipapi.co/json/')
-.then(res => res.json())
-.then(data => {
-    const city = data.city || 'your area';
-    const region = data.region || '';
-    const country = data.country_name || '';
-    document.getElementById('location-text').innerHTML =
-        `Congrats! You are eligible from ${city}, ${region} - ${country} • Only <strong>$1</strong>`;
-})
-.catch(err => console.log(err));
-</script>
+        <div class="bg-white shadow-lg rounded-xl p-8 text-center">
+          <h4 class="text-xl font-semibold mb-4 text-blue-700">Secure Data Handling</h4>
+          <p>Your information is encrypted and processed through approved and compliant verification partners.</p>
+        </div>
+
+        <div class="bg-white shadow-lg rounded-xl p-8 text-center">
+          <h4 class="text-xl font-semibold mb-4 text-blue-700">Instant Results</h4>
+          <p>Receive screening results quickly for faster rental application decisions.</p>
+        </div>
+
+        <div class="bg-white shadow-lg rounded-xl p-8 text-center">
+          <h4 class="text-xl font-semibold mb-4 text-blue-700">Fully Authorized</h4>
+          <p>We require full applicant consent before completing any credit or background check.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="process" class="bg-gray-100 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">How The Process Works</h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <div class="text-center">
+          <div class="text-blue-700 text-3xl font-bold mb-4">1</div>
+          <h4 class="text-xl font-semibold mb-2">Submit Applicant Info</h4>
+          <p>Provide your basic details and confirm your authorization for screening.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="text-blue-700 text-3xl font-bold mb-4">2</div>
+          <h4 class="text-xl font-semibold mb-2">Identity Verification</h4>
+          <p>We confirm identity securely through our verification partners.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="text-blue-700 text-3xl font-bold mb-4">3</div>
+          <h4 class="text-xl font-semibold mb-2">Receive Screening Report</h4>
+          <p>Your authorized credit & background report is generated and shared.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-white py-10 border-t">
+    <div class="max-w-6xl mx-auto px-6 text-center text-gray-600">
+      <p class="font-semibold text-gray-700">Public-Record USA</p>
+      <p class="mt-1 text-sm">Public-Record | Data Security Certified</p>
+      <p class="mt-4 text-xs text-gray-500">© 2025 Public-Record USA. All Rights Reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
